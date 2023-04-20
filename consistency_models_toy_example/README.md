@@ -7,13 +7,13 @@ It should take about 1~2 minutes on a laptop CPU to train each section.
 Following [Consistency Models](https://arxiv.org/abs/2011.13456), this toy example uses the forward SDE is defined as:
 
 $$
-    \mathrm d \bold x(t)  = \sqrt{2 t} \mathrm d \bold w(t)
+    \mathrm d \mathbf x(t)  = \sqrt{2 t} \mathrm d \mathbf w(t)
 $$
 
 and the probability flow ODE is:
 
 $$
-    \mathrm d \bold x(t) = -t \nabla_{\bold x(t)}\log p_t (\bold x(t))\mathrm d t
+    \mathrm d \mathbf x(t) = -t \nabla_{\mathbf x(t)}\log p_t (\mathbf x(t))\mathrm d t
 $$
 
 **Note:** I wish this toy example helps you learn and understand, and it is limited to this purpose. It implements the main techniques mentioned in the paper, but there are still details that are not aligned with the paper or other popular implementations. Please refer to Song's [offical repo](https://github.com/openai/consistency_models) if you are going deeper.
